@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eee;
+    line-height: 1.5;
+}
+
+a {
+      text-decoration: none;
+      color: inherit
+}
+
+ul {
+    list-style-type: none;
+}
+
+/***Typography*****
+********************
+
+/* logo */
+img {
+    max-width: 25rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+/* Header */
+header {
+    text-align: center;
+    font-size: 1.8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    z-index: 10; /*without it, the buttons weren't overlapped by the navbar*/
+}
+
+.nav-item {
+    margin-bottom: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    border-bottom: 2px solid #000;
+    opacity: .8;
+}
+
+/* Hero */
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-top: 18rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="email"] {
+    font-size: 1.3rem;
+    font-family: inherit;
+    text-align: center;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    transform: scale(1);
+    transition: .5s;
+}
+
+input[type="email"]:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 900;
+    background-color: #ff7f50;
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transform: scale(1);
+    transition: .5s;
+  }
+  
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    background-color: #dc143c;
+  }
+
+/* Features */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+} 
+
+p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+  
+.offer-details {
+    text-align: justify;
+}
+
+.offer-icon {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 1rem;
+    color: #ff7f50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none; /*get rid of icons on small screens*/
+  }
+
+/* How it works */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Pricing */
+h3 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    background-color: #a9a9a9;
+    padding: 0.7rem;
+  }
+
+.pricing-item {
+    font-size: 1.4rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-item li {
+    margin-top: 0.7rem;
+}
+
+.pricing-item li:first-child {
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+.pricing-item .btn {
+    margin: 1rem 0 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: lightgrey;
+    padding-bottom: 3rem;
+  }
+  
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+#footer a,
+  footer p {
+    font-size: 1.3rem;
+  }
+
+#footer a:last-child {
+    margin-right: 0;
+  }
+
+#footer a {
+    margin: 1rem 2rem .5rem 0;
+  }
+
+footer p {
+    color: #2f4f4f;
+    text-align: right;
+  }  
+
+/********Layout*****
+********************/
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+/* Media queries */
+@media (min-width: 700px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 10rem;
+        font-size: 2rem;
+    }
+
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        margin-right: 3rem;
+    }
+
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+
+    img {
+        margin-top: 0;
+    }
+
+    h1 {
+        margin-top: 11rem;
+        font-size: 3rem;
+    }
+
+    .offer-icon {
+        display: flex;
+    }
+
+    #pricing {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pricing-item {
+        width: 32%;
+    }
+
+    input[type="email"] {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    } 
+    
+    p {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #footer a,
+    footer p {
+    font-size: 1.5rem;
+  }
+}
+
+
